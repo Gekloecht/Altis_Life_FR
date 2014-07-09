@@ -1,6 +1,6 @@
 /*
 	Author: Killzone_Kid
-	
+	trololololololololololol
 	Description:
 	Find a string within a string (case insensitive)
 	
