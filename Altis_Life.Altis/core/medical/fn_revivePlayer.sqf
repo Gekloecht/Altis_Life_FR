@@ -11,7 +11,7 @@ if(isNull _target) exitWith {}; //DAFUQ?@!%$!R?EFFD?TGSF?HBS?DHBFNFD?YHDGN?D?FJH
 
 _revivable = _target getVariable["Revive",FALSE];
 if(_revivable) exitWith {};
-if(_target getVariable ["Reviving",ObjNull] == player) exitWith {hint "Someone else is already reviving this person";};
+if(_target getVariable ["Reviving",ObjNull] == player) exitWith {hint "Quelqu'un réanime déjà cette personne";};
 if(player distance _target > 5) exitWith {}; //Not close enough.
 
 //Fetch their name so we can shout it.
@@ -53,19 +53,19 @@ while {true} do
 //Kill the UI display and check for various states
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
-if(_target getVariable ["Reviving",ObjNull] != player) exitWith {hint "Someone else is already reviving this person"};
+if(_target getVariable ["Reviving",ObjNull] != player) exitWith {hint "Quelqu'un réanime déjà cette personne"};
 _target setVariable["Reviving",NIL,TRUE];
 if(!alive player OR life_istazed) exitWith {life_action_inUse = false;};
-if(_target getVariable["Revive",FALSE]) exitWith {hint "This person either respawned or was already revived."};
+if(_target getVariable["Revive",FALSE]) exitWith {hint "Cette personne est deja morte ou a déja été réanimée."};
 if((player getVariable["restrained",false])) exitWith {life_action_inUse = false;};
-if(!isNil "_badDistance") exitWith {titleText["You got to far away from the target.","PLAIN"]; life_action_inUse = false;};
-if(life_interrupted) exitWith {life_interrupted = false; titleText["Action cancelled","PLAIN"]; life_action_inUse = false;};
+if(!isNil "_badDistance") exitWith {titleText["Vous êtes trop loin.","PLAIN"]; life_action_inUse = false;};
+if(life_interrupted) exitWith {life_interrupted = false; titleText["Action annulée","PLAIN"]; life_action_inUse = false;};
 
 life_atmcash = life_atmcash + (call life_revive_fee);
 life_action_inUse = false;
 _target setVariable["Revive",TRUE,TRUE];
 [[player getVariable["realname",name player]],"life_fnc_revived",_target,FALSE] spawn life_fnc_MP;
-titleText[format["You have revived %1 and received $%2 for your services.",_targetName,[(call life_revive_fee)] call life_fnc_numberText],"PLAIN"];
+titleText[format["Vous avez réanimé %1 et avez recu $%2 pour vos services.",_targetName,[(call life_revive_fee)] call life_fnc_numberText],"PLAIN"];
 
 sleep 0.6;
 player reveal _target;

@@ -32,9 +32,9 @@ player createDiarySubject ["controls","Controls"];
 	
 	player createDiaryRecord["changelog",
 		[
-			"Custom Change Log",
+			"Change Log Altis Life FR",
 				"
-					This section is meant for people doing their own edits to the mission, DO NOT REMOVE THE ABOVE.
+					ChangeLogs disponibles sur www.altislifefr.com.
 				"
 		]
 	];
@@ -202,28 +202,61 @@ player createDiarySubject ["controls","Controls"];
 		]
 	];
 	
-// Police Section
-	player createDiaryRecord ["policerules",
+// Seal Team Sloth Section
+
+	player createDiaryRecord ["sealteamsloth",
 		[
-			"Crisis Negotiation",
+			"Teamspeak",
 				"
-				Crisis Negotiation must be handled by a Sergeant. If one is not available, the person with the next highest rank must handle the situation.<br/><br/>
+				ts3.dedizones.com:11009<br/><br/>
 				"
 		]
 	];
+	
+	player createDiaryRecord ["sealteamsloth",
+		[
+			"Website/Forums",
+				"
+			    www.altislifefr.com<br/><br/>
+				"
+		]
+	];
+	
+	player createDiaryRecord ["sealteamsloth",
+		[
+			"Donations",
+				"
+				En Maintenance !<br/><br/>
+				De retour prochainement, veuillez nous en excuser.<br/><br/>
+				"
+		]
+	];
+		
+	
+// Police Section
+
 	player createDiaryRecord ["policerules",
 		[
-			"The Federal Reserve",
+			"Contre résistance",
 				"
-				1. The Federal Reserve is illegal for civilians to enter, unless they have been given authorization. If civilians enter without authorization they are to be escorted off-site or arrested if they persist.
-				2. Helicopters flying over the Federal Reserve may be asked to leave and disabled if they refuse.<br/>
-				2. If the Federal Reserve is getting robbed, it is encouraged that all available officers move in to stop it.<br/>
-				3. Nearby officers should immediately head to the Federal Reserve to assist. Petty crimes can be dropped during a robbery.<br/>
-				4. Lethal force on bank robbers may be used if no other alternative is available. Every option to taze and arrest the person should be made first.<br/>
-				5. Police may not fire blindly into the building.<br/>
-				6. The police should evacuate the civilians from the building during a robbery.<br/>
-				7. Any civilian who actively makes an attempt to block the police from entering the building may be treated as an accomplice.<br/>
-				8. Supervisory officers may hire individuals or contract a group of people to work as security guards for the bank. See 'Contracting' section for more information.<br/><br/>
+				1. Toute personne rebelle commettant des actes rebelles sera considéré comme telle.<br/>
+				2. Toute personne portant une tenue rebelle autre que la Première et celle du Leader en pleine ville sera considéré comme telle.<br/>
+				3. La force létale pourra être utilisé contre les personnes rebelles si elles émettent une menace quelconque ou si il y a délie de fuite(immobilisé le véhicule )<br/><br/>
+				"
+		]
+	];
+	
+	player createDiaryRecord ["policerules",
+		[
+			"Braquage de banque",
+				"
+				1. Si la banque est braquée, tous les gendarmes disponibles doivent êtres prêts à recevoir les ordres des ses supérieurs et à les executer.<br/>
+				2. Les officiers de patrouilles doivent immédiatement aller à la banque sous ordre d'un supérieur, les petites infractions/arrestations doivent être laissées au second plan.<br/>
+				-La force létale doit être utilisée en toute dernière alternative. Toutes les autres options doivent être prises en considération.<br/>
+				-Les gendarmes doit évacuer les civils hors de la banque avant toute intervention sur la banque.<br/>
+				-Tous civils bloquant intentionnellement les gendarmes qui pénètre dans l’enceinte de la banque sera arrêté, tazé, ou bien tué.<br/>
+				-Aucun véhicule armé pour défendre la banque. (Hunter HMG, …)<br/>
+				Les petites infractions/arrestations doivent être laissées au second plan.<br/><br/>
 				"
 		]
 	];
@@ -231,239 +264,164 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"Aviation",
 				"
-				1. No helicopter can land within city limits without authorization from the highest ranking officer online. (Exceptions being what is listed below.)<br/>
-				Kavala: The hospital helipad (037129) or docks (031128).<br/>
-				Athira: The sports field (138185) or behind the DMV (140188).<br/>
-				Pyrgos: The fields North/East of DMV (170127)<br/>
-				Sofia: Opposite the car shop (258214) or the fields Southeast of the garage (257212)<br/>
-				Small towns: An appropriate location may be chosen. This is to be judged by officers on a case by case basis.<br/><br/>
+				1. Aucun hélicoptère ne doit atterrir dans les limites des villes(Héliport de l'hopital). Sauf, s’il en a reçu l’autorisation par l’un de ses supérieurs. (Les exceptions sont listées si dessous.)<br/>
+				-L’héliport peut être fermé sur une courte période de temps à cause d’une opération en cours, mais il ne peut jamais être fermé sur une longue période.<br/>
+				-Les hélicoptères sont autorisé à atterrir dans les champs des collines au nord de la tour radio.<br/>
+				-Les hélicoptères ne peuvent pas voler en dessous de 200m au dessus des villes.<br/>
+				-Les hélicoptères, civils ou gendarmes, ne peuvent en aucun cas faire du vol stationnaire au dessus des villes, hors des opération de gendarme dans les cas des hélicoptères de la gendarmerie.<br/>
+				-Tous les hélicoptères ne peuvent atterrir sur une route.<br/><br/>
+				"
+		]
+	];
+	
+	player createDiaryRecord ["policerules",
+		[
+			"Zones illégales", 
+				"
+				1. Ne pas entrer dans les zones illégales hors raid (voir raid/camping).<br/>
+				2. Si vous poursuivez quelqu’un dans une zone illégale, appelez des renforts. (pour être un minimum de 4).<br/>
+				3. Les policiers ne peuvent en aucun cas camper sur une zone illégale plus de 10 minutes par heures.<br/><br/>
+				"
+		]
+	];
+	
+	player createDiaryRecord ["policerules",
+		[
+			"Patrouilles", 
+				"
+				1. Un gendarme patrouillant sur les routes de Altis cherche des véhicules abandonnés, des activités criminelles ou des conduites dangereuses.<br/>
+				2. Les patrouilles peuvent être effectuées à pied dans les villes et en véhicule en dehors.<br/>
+				3. Les patrouilles ne peuvent pas entrer dans les zones illégales.(sauf raid/camping)<br/>
+				4. Si la poursuite d’un/des fugitif(s) se terminent dans une zone safe, vous pouvez continuer cette pousuite de ce(s) fugitif(s) à l’intérieur de cette zone. (seulement eux).<br/>
+				5.Une patrouille doit être constitué de deux unités, ceci est obligatoire(sauf dans le cas où il y a manque d'effectif, alors il est conseillé de rester dans les villes)<br/><br/>
+				"
+		]
+	];
+	
+	player createDiaryRecord ["policerules",
+		[
+			"Barrages", 
+				"
+				Préambule : La police est vivement encouragée à placer des Barrages dans des endroits stratégiques afin de combattre les activités illégales et rendre les routes sécuritaires.<br/><br/>
 				
-				2. Helicopters may not land on roads.<br/>
-				3. Police may temporarily forbid landing at  but it cannot remain closed for a long period of time.<br/>
-				4. Helicopters cannot fly below 150m over the city without authorization.<br/>
-				5. Helicopters cannot hover over the city. Cops may only hover over the city if there is an active police operation going on.<br/><br/>
+				1. Un barrage doit être fait de 2 gendarmes ou plus et utiliser deux véhicules ou plus.<br/>
+				2. Un barrage ne peut être placé à moins de 500m d’une zone illégales.<br/>
+				3. Les barrages ne peuvent se placer que sur une route.<br/>
+				4. Les barrages ne doivent pas être marqués sur la carte.<br/><br/>
 
+				Les procédures d’un barrage:<br/>
+				1. Demandez au conducteur du véhicule de s’arrêter sur le bas-côté de la route et de couper le moteur.<br/>
+				2. Demandez au conducteur et aux passagers s’ils possèdent des armes (si c’est le cas, ne leur passer pas immédiatement les menottes et demander leur simplement de baisser leurs armes).<br/>
+				3. Demandez au conducteur et aux passagers de descendre du véhicule.<br/>
+				4. Demandez à tout le monde de se mettre sur le bas-côté de la route de manière à sécuriser les lieux par rapport au flux de voiture.<br/>
+				5. Demandez si vous pouvez procéder à un contrôle.<br/>
+				6. S’ils acceptent, demandez aux occupants du véhicule si vous pouvez leur passer les menottes afin de les contrôler.<br/>
+				7. Après le contrôle effectué, demandez à tous les occupants du véhicules de regagner leur voiture.<br/>
+				8. Pensez à vérifier la « WANTED LIST », leur destination et la nature de leur activités.<br/>
+				9. Dans le cas ou la personne aurait des substances illicites, vous pouvez fouiller leurs sacs à dos et demandez lui de vous donner sa marchandise. Ce point fait, une amende ou arrestation est requise, dépendant du crime commis.<br/>
+				10. Vous n’avez en aucun cas le droits de fouiller un sac, si il ne possède de véhicules et tenues rebelles, ou de substances illicites.<br/><br/>
 				"
 		]
 	];
 	
 	player createDiaryRecord ["policerules",
 		[
-			"Illegal Areas", 
+			"Vehicules", 
 				"
-				1. Gang areas are not considered illegal. Thus a cop may enter without a raid, but may not restrain or stop anyone inside without probable cause/illegal activity. (Talking to the gang NPC is NOT probable cause/illegal activity.)<br/>
-				2. Do not enter an illegal area unless it is part of a raid. see Raiding/Camping.<br/>
-				3. If you chase someone into an illegal area, call for backup.<br/>
-				4. Under no circumstances is an officer allowed to camp any illegal area.<br/><br/>
-				"
-		]
-	];
-	
-	player createDiaryRecord ["policerules",
-		[
-			"Patrolling", 
-				"
-				1. Police may patrol the island's roads and towns searching for abandoned vehicles and criminal activity.<br/>
-				2. Patrols can be done on foot inside of a town, or in a vehicle when outside.<br/>
-				3. Patrols do not include illegal areas. See Raiding/Camping.<br/><br/>
-				"
-		]
-	];
-	
-	player createDiaryRecord ["policerules",
-		[
-			"Checkpoints", 
-				"
-				Cops are encouraged to setup checkpoints in strategic areas to help combat illegal activity and promote safety on the road.<br/><br/>
+				1. Les véhicules garés sur le bas-côté de la route ne doivent pas être mis à la fourrière.<br/>
+				2. Les véhicules qui semble abandonnés, cassés ou sans conducteur, peuvent être mis à la fourrière.<br/>
+				3. Tout véhicules qui n’a pas bougé depuis un certain temps peut être mis à la fourrière.<br/>
+				4. Vérifiez si le propriétaire est en ligne ou hors ligne, avant de mettre le véhicule à la fourrière.<br/>
+				5. Interdit de mettre un véhicule à la fourrière si l’action n’est pas finit.<br/>
+				6. La mise à la fourrière est une part importante de la gendarmerie. Elle permet de nettoyer les rues et de garder le serveur moins laggy. Les véhicules rebelles sont strictement interdits dans les villes. Tout officier de la gendarmerie qui croise ou voit un véhicule rebelle dans ou en dehors des villes doit tenter de l’arrêter.<br/><br/>
 				
-				1. A checkpoint must consist of 3 or more officers, utilizing 2 or more vehicles. An ATV does not count as one of the required vehicles, but may still be used.<br/>
-				2. A checkpoint can not be setup within 300m of an illegal area. Basically, you cannot set one up on top of an illegal area.<br/>
-				3. Checkpoints may only be setup on roads, but it does not have to be on a crossroad.<br/>
-				4. Checkpoints do not have to be marked on the map.<br/><br/>
-
-
-				Proper Checkpoint Procedure:<br/>
-				1. Have the driver stop the vehicle at a safe distance and turn off the engine.<br/>
-				2. Ask the driver and any passengers if they have any weapons.<br/>
-				3. Ask the driver and any passengers to exit the vehicle. If they have weapons, do not immediately restrain them when they get out, tell them to lower their weapons and given them a reasonable amount of time to do so.<br/>
-				4. Ask them where they are headed to and from.<br/>
-				5. Ask if they will submit to a search.<br/>
-				6. If they allow a search, you may restrain them and search them.<br/>
-				7. If they do not submit to a search, you must let them go, unless there is probable cause.<br/>
-				8. After the search is done, you may allow them to re-enter their vehicle and drive away.<br/>
-				9. In case anything illegal is found, the person may be ticketed or arrested depending on the crime.<br/><br/>
+				Véhicules rebelles :<br/>
+				Ifrit<br/>
+				Littlebird (Rebelle Modèle)<br/>
+				Pick-up (Rebelle Modèle)<br/>
+				Pick-up armée<br/><br/>
 				"
 		]
 	];
 	
 	player createDiaryRecord ["policerules",
 		[
-			"Vehicles", 
+			"Arrestation et Contravension",
 				"
-				1. Vehicles in the parking lot, or are reasonably parked elsewhere should be left alone.<br/>
-				2. Vehicles that look abandoned, broken, with no driver, can be impounded.<br/>
-				3. Boats should be parked reasonably on shore.<br/>
-				4. Any vehicle that hasn't moved in a significant amount of time may be impounded.<br/>
-				5. Impounding is an essential job for a cop, it helps keep the server clean and less laggy.<br/>
-				6. If in doubt, always search the vehicle and message the owner(s) before impounding.<br/>
-				7. Police speedboats or Hunter HMGs may be used to assist in apprehending criminals. The weapon should be used to disable vehicles, not to blow them up.<br/><br/>
-				"
-		]
-	];
+				Préambule : Les arrestations doivent être faites pour des criminels qui se mettent ou mettent en danger la vie d’autrui.<br/><br/>
 
-	player createDiaryRecord ["policerules",
-		[
-			"Speeding", 
-				"
-				The following speeds are to be enforced by the Altis Police Force for the absolute safety of the citizens of Kavala and all travelling beyond the city.<br/><br/>
-				
-				Inside major cities:<br/>
-				Small roads: 50km/h<br/>
-				Main roads: 65km/h<br/>
-				Outside major cities:<br/>
-				Small roads: 80km/h<br/>
-				Main roads: 110km/h<br/><br/>
-				"
-		]
-	];
-	
-	player createDiaryRecord ["policerules",
-		[
-			"City Protocol", 
-				"
-				1. Officers may patrol major cities - Kavala, Athira, Pyrgos and Sofia.<br/>
-				2. Officers may stop by the car shop to make sure there are no cars that need to be impounded.<br/>
-				3. Officers may not stand around or loiter in the centre of town.<br/>
-				4. Officers may enter the town in a large number should a rebellious act occur. After the area is clear, they need to leave the town again.<br/>
-				5. Martial law may not be declared at any time.<br/>
-				6. The Police HQ buildings are illegal for civilians to enter without authorization, however it is NOT illegal for civilians to be nearby unless they are causing a nuisance.<br/><br/>
-				"
-		]
-	];
-	
-	player createDiaryRecord ["policerules",
-		[
-			"Arresting and Ticketing",
-				"
-				Arresting should be done to criminals who are considered a danger to themselves or others.<br/><br/>
-
-				1. You may not arrest someone if you have given them a ticket and they paid it.<br/>
-				2. You must tell the suspect why they are being arrested before you arrest them.<br/>
-				3. If a civilian is wanted, you may arrest them. Do not kill them, unless the situation falls under the 'Use of Lethal Force' section.<br/><br/>
-
-
-				Ticketing a civilian is considered a warning for the civilian. If they break a law, but do not pose a threat to anyone, you may ticket a civilian.<br/><br/>
-
-				1. Tickets must be a reasonable price.<br/>
-				2. Ticket prices should be based off of the crimes committed.<br/>
-				3. Refusal to pay a legit ticket is grounds for arrest.<br/>
-				4. Giving a civilian and illegitimate ticket, such as $100k for speeding, etc., is not allowed and will result in your removal from the police department.<br/><br/>
-				
-				A complete list of all crimes and the appropriate punishments should be given to officers during training. If in doubt, or if you have not been trained, ask a higher ranking officer what to do.<br/><br/>
-				
-				The list is available at crime.sealteamsloth.com<br/><br/>
+				1. Vous pouvez arrêter une personne si son amende s'élève a plus de 30 000 euros<br/>
+				2. Vous devez dire à la personne que vous l’arrêtez et les raisons de cette arrestation.<br/>
+				3. Si un civil est recherché pour diverses raisons, vous devez l’arrêter et n’utiliser la force létale que si votre vie est en danger ou si la personne tente de fuire(immobilisation du véhicule). Mettre une amende à un civil est considéré comme un avertissement, s’il récidive une arrestation peut être de mise.<br/>
+				4. Les amendes doivent correspondre à un prix raisonnable.<br/>
+				5. Le montant des amendes se basent sur la nature des crimes commis.<br/>
+				6. Le fait de refuser une amende est un motif d’arrestation.<br/><br/>
 				"
 		]
 	];
 		
 	player createDiaryRecord ["policerules",
 		[
-			"Weapons", 
+			"Armes légal", 
 				"
-				A cop is NEVER allowed to supply civilians with weapons. This will get you banned from the server and removed from being a cop.<br/><br/>
+				Un policiers n'est jamais autorisé à donner une arme à un civil. Si constaté vous vous exposez à avoir un blame sur le serveur et être radié des forces de l'ordre.<br/><br/>
 
-				Legal Weapons for Civilians to carry with a permit:<br/>
-				1. P07<br/>
-				2. Rook<br/>
-				3. ACP-C2<br/>
-				4. Zubr<br/>
-				5. 4-five<br/>
-				6. PDW2000<br/><br/>
-
-				Any other weapon (Including Silenced P07 [Considered a Police Weapon]) is illegal.<br/><br/>
-
-				1. Civilians are not allowed to have a weapon out within the town limits.<br/>
-				2. Civilians may have a gun out when they are not in the town. However they should submit to a license search if confronted by an officer and should have the gun lowered (Press Ctrl Twice).<br/><br/>
+				Armes légales avec un port d’arme :<br/>
+				Rook<br/>
+				PDW 9mm<br/>
+				Toute autre arme sera considérée comme illégale.<br/>
+				1. Les civils n’ont pas la permission de porter une arme dans l’enceinte des villes, ils doivent l’avoir dans leurs sac.<br/>
+				2. Les civils peuvent porter une arme en main en dehors des villes, cependant l’arme doit être baissée (double CTRL).<br/><br/>
 				"
 		]
 	];
 	
 	player createDiaryRecord ["policerules",
 		[
-			"Use of Non-Lethal Force",
+			"Utilisation de la force non létale",
 				"
-				At this time the Taser (Silenced P07) is the only form of Non-Lethal Force.<br/><br/>
+				Préambule : Pour le moment le tazer est la seule forme de force non létale.<br/><br/>
 
-				1. Taser should be used to incapacitate non complying civilians in order to restrain them.<br/>
-				2. Do not discharge your Taser unless you intend to incapacitate a civilian, randomly discharging your weapon will result in your suspension.<br/>
-				3. Only use your Taser in compliance with the laws and the rules, do NOT enforce your will on others.<br/><br/>
+				1. Le tazer ne peut être utilisé que pour immobiliser une personne refusant de coopérer.<br/><br/>
 				"
 		]
 	];
 
 	player createDiaryRecord ["policerules",
 		[
-			"Raiding/Camping",
+			"Raid/Camp",
 				"
-				Raiding is defined as a squad of police officers invading an area of high criminal activity in order to stop the criminals in illegal acts.<br/><br/>
+				Préambule : Un raid est défini par un squad de 4 gendarmes ou plus, dans le seul but de rentrer dans une zone illégale. Cette démarche a pour intention d’interpeller des suspects pratiquant une activité illégale.<br/><br/>
 
-				1. In order to raid an area, the cops must have at least 4 officers involved, one of which must be a Sergeant or above.<br/>
-				2. All civilians in a raid area may be restrained and searched. If nothing illegal is found, you must let them go.<br/>
-				3. If illegals are found during a search, you may proceed to arrest or fine as usual.<br/>
-				5. Lethal force is only authorized as described under 'Use of Lethal Force'.<br/>
-				6. After the area is secure, the officers must leave the area.<br/>
-				7. An area cannot be raided again for 20 minutes after a previous raid.<br/>
-				8. If the raid is a failure (All officers die), the 20 minute timer still applies to those officers.<br/>
-				9. Backup may be called in, but it may not consist of fallen officers (see 'New Life Rule').<br/><br/>
-
-				Camping is defined as the prolong stay of an officer in an area.<br/><br/>
-
-				1. Checkpoints are not considered camping. See Checkpoint section for a definition of proper checkpoint procedures.<br/>
-				2. See Bank Robbery and Agia Marina Protocol sections for more info on camping in the main town.<br/>
-				3. Camping of illegal areas is staying longer than needed after a raid, or if officers do not conduct a raid but continue to watch and take action against civilians entering the area.<br/><br/>
+				1. Tout civil dans la zone peut être fouiller et arrêter.<br/>
+				2. Si il n’y a aucun fait illégal de trouver pendant le raid, l’officier doit laisser partir les civils.<br/>
+				3. La force létale est autorisée uniquement si la situation ne permet plus aucun autre recours, et afin de mobiliser un véhicule sur zone avant qu’il ne s’enfuit !<br/>
+				4. Après la fin d’un raid, tous les officiers doivent quitter la zone dans les 15 minutes qui suivent.<br/>
+				5. Il est possible de faire 2 RAID par reboot avec un écart de 60 minutes minimum<br/>
+				6. Des renforts peuvent être appelés. Cependant, il est interdit d’appeler des officiers tombés durant le raid (voir les règles de nouvelle vie).Le camping est le fait de rester de façon prolongée dans une zone.<br/>
+				7. Les barrages ne sont pas considérés comme du camping<br/>
+				8. Faire du camping dans les zones illégales. C’est rester plus que nécessaire après un raid, ou regarder ET prendre des mesures contre les civils qui entrent dans cette zone.<br/>
+				9. Il est interdit de camper plus de 15 minutes sur la même zone (légale/illégale).<br/><br/>
 				"
 		]
 	];
 	
 	player createDiaryRecord ["policerules",
 		[
-			"Chain of Command",
+			"Utilisation de la force létale",
 				"
-				The highest ranking officer on duty is in charge of the police force outside of admins currently online. The high ranking officer is expected to follow the rules and guidelines of his/her rank, and must report to the admin in case any action need be taken.<br/><br/>
-
-				Police Chain of Command:<br/>
-				1. Chief<br/>
-				2. Deputy Chief<br/>
-				3. Superintendent<br/>
-				4. Captain<br/>
-				5. Lieutenant<br/>
-				6. Sergeant<br/>
-				7. Senior Patrol Officer<br/>
-				8. Patrol Officer<br/>
-				9. Cadet<br/><br/>
-
-				Cops in game who are not enrolled/accepted into the SPD are the lowest tier and have no say in police operations.<br/><br/>
+				1. La force létale n’est permise que pour la protection de votre vie, de celles des autres gendarmes et des civils, et uniquement si la force non létale n’est pas assez efficace.<br/>
+				2. Tirer avec une arme quand vous n’êtes pas en danger et que vous n’êtes pas en entrainement est strictement prohibé. Tout officier découvert à tirer avec une arme dans les cas cités ci-dessus sera suspendu des forces de la police.<br/><br/>
 				"
 		]
 	];
 	
 	player createDiaryRecord ["policerules",
 		[
-			"Use of Lethal Force",
+			"Règles TeamSpeak",
 				"
-				1. Use of Lethal force is only permitted for the protection of your life, another officers life, or a civilians life, if and only if non-lethal force would not be effective.<br/>
-				2. Discharging of a weapon when not under threat or not during training exercises is not allowed. Officers caught in violation of this rule will be removed from the server and suspended from the SPD.<br/>
-				3. Failure to follow proper weapons discipline and procedure will get you removed from the server and suspended from the SPD.<br/><br/>
-				"
-		]
-	];
-	
-	player createDiaryRecord ["policerules",
-		[
-			"Teamspeak Rule",
-				"
-				1. All cops must be on Teamspeak 3 in a designated cop channel. Failure to be on Teamspeak during an admin check will result in your immediate dismissal from the server.<br/>
-				2. Please join Teamspeak BEFORE you spawn in as a cop, heck, join Teamspeak before you even join the server.<br/><br/>
+				1. Tous les gendarmes doivent se trouver dans le channel qui leur est dédié. Faute de quoi.<br/>
+				2. Rejoindre le teamspeak avant de se connecter en policier est obligatoire.<br/><br/>
 				"
 		]
 	];
@@ -473,71 +431,79 @@ player createDiarySubject ["controls","Controls"];
 // Illegal Items Section
 	player createDiaryRecord ["illegalitems",
 		[
-			"Rebel Rules",
+			"Règles Rebelles",
 				"
-				A rebel is one who rises in armed resistance against a government. In this case it would be the police. However, due to the small amount of police compared to the possible amount of rebels, do not attack the police without a reason, please be civil and use common sense, and don't take the word rebel literally, but instead how it will make this server fun for all.<br/><br/>
-				1. A rebel must first form a gang, and then declare intentions.<br/>
-				2. Resistance does not excuse RDMing (See RDMing in General Rules)<br/>
-				3. Resistance roleplay should be conducted in more ways than constantly robbing the bank or shooting police officers.<br/>
-				4. Resistance must be coordinated.<br/>
-				5. A PROPER reason must be behind each and every attack.<br/><br/>
-				"
-		]
-	];
-	player createDiaryRecord ["illegalitems",
-		[
-			"Gang Rules",
-				"
-				1. Being in a gang is not illegal. Only when illegal crimes are committed.<br/>
-				2. Being in a gang area is not illegal. Only when partaking in illegal activities.<br/>
-				3. Gangs may hold and control gang areas. Other gangs may attack a controlling gang to compete for control of a gang area.<br/>
-				4. To declare war on another gang, the leader must announce it in global and all gang members of both gangs must be notified. For a more long term gang war, a declaration should be made on the forums.<br/>
-				5. Gangs may not kill unarmed civilians, unless said civilian is part of a rival gang and in your gangs controlled area.<br/>
-				6. Gangs may not kill civilians, unless they are under threat. Killing unarmed civilians because they do not comply is considered RDM, but you can injure/damage.<br/><br/>
-				"
-		]
-	];
-	player createDiaryRecord ["illegalitems",
-		[
-			"Illegal Vehicles",
-				"
-				A civilian in control of the following prohibited vehicles is subject to the consequences defined in the unauthorized control of a prohibited vehicle law.<br/><br/>
+				Préambule : Un rebelle est quelqu’un qui se soulève, en utilisant les armes, contre un gouvernement/gendarmerie. Cependant, en raison du petit effectif de gendarme comparé au nombre possible de rebelles, tous les rebelles doivent attaquer avec une raison spécifique. Etre civil et faire preuve de bon sens rendra l’expérience de jeu plus agréable pour tous.<br/><br/>
 
-				1. Ifrit<br/>
-				2. Speedboat<br/>
-				3. Hunter<br/>
-				4. Police Offroad<br/>
-				"
-		]
-	];
-	player createDiaryRecord ["illegalitems",
-		[
-			"Illegal Weapons",
-				"
-				A civilian in possession of the following is subject to the consequences as defined in the illegal possession of a firearm law.<br/><br/>
+				1. La rébellion n’excuse pas le RDM ou FK ( kill random ou free kill ) et faire du RDM peut être suivi d’un ban.<br/>
+				2. La rébellion doit être RP, et doit avoir d’autres activités que voler la banque.<br/>
+				3. La rébellion n’inclut pas de faire la guerre à la gendarmerie sans revendications préalables.<br/>
+				4. Interdit de voler ou dégrader tant que la personne coopère.<br/>
+				5. Interdit de camper plus de 15 minutes sur une zone légale/illégale<br/>
+				6. Si un groupe rebelle attaque la banque, aucun autre groupe rebelle ne peut être présent sur les lieux.<br/>
+				7. Si vous êtes menacé ou poursuivi par la gendarmerie, vous pouvez vous défendre mais seulement dans ces conditions.<br/>
 
-				1. MX Series<br/>
-				2. Katiba Series<br/>
-				3. TRG Series<br/>
-				4. Mk.20 Series<br/>
-				5. Mk.18 ABR<br/>
-				6. SDAR Rifle<br/>
-				7. Sting SMG<br/>
-				8. Silenced P07 (Taser)<br/>
-				9. Any explosives<br/><br/>
 				"
 		]
 	];
 	player createDiaryRecord ["illegalitems",
 		[
-			"Illegal Items",
+			"Les règles des gangs",
 				"
-				The following items are illegal to posses:<br/><br/>
-				1. Turtle<br/>
-				2. Cocaine<br/>
-				3. Heroin<br/>
-				4. Cannabis<br/>
-				5. Marijuana<br/><br/>
+				1. Être dans un gang n’est pas illégal. Sauf si des crimes y sont commis.<br/>
+				2. Être dans une zone de gang n’est pas illégal. Sauf en cas d’activités illégales.<br/>
+				3. Les gangs peuvent tenir et contrôler des zones de gang. Les autres gangs peuvent les attaquer pour contrôler à leur tour la zone.<br/>
+				4. Pour déclarer la guerre à un autre gang, le leader doit en faire l’annonce en chat global et tous les membres des deux gangs doivent en etre notifiés. Pour une guerre totale et à plus long terme une declaration doit être faites sur le forum.<br/>
+				5. Les gangs ne doivent pas tuer les civils au même titre que n’importe qui, sauf s'il fait parti d’un autre gang ou qu’il est dans une zone de controle de gang.<br/>
+				6. Les gangs ne doivent pas tuer les civils, sauf s'ils sont largement menacés. Tuer des civils non-armés parce qu’ils ne coopèrent pas est considéré comme du FreeKill, mais vous pouvez blesser/handicaper.<br/><br/>
+				"
+		]
+	];
+	player createDiaryRecord ["illegalitems",
+		[
+			"Véhicules illegaux",
+				"
+				Toute personne possédant ou au volant des véhicules suivants est exposée aux conséquences définies dans la loi sur l’interdiction de la possession des véhicules interdits.<br/><br/>
+
+
+				1. Vehicule Rebelles.<br/>
+					-Ifrit<br/>
+					-Littlebird avec (Camouflage Rebelle)<br/>
+					-Pick-up (Camouflage Rebelle)<br/>
+					-Pick-up armée<br/><br/>
+
+				2. Vehicules de police.<br/>
+				5. “Speedboat”<br/><br/>
+				"
+		]
+	];
+	player createDiaryRecord ["illegalitems",
+		[
+			"Armes illegales",
+				"
+				La possession des armes suivantes par un civil est illégale, même avec un port d’arme :<br/><br/>
+					1. Toutes armes d'un calibre 5.56 ou supérieur<br/>
+					-MX Series...<br/>
+					-Katiba Series...(Toutes armes ayant un calibre autre que 9mm, même l'arme donateur)<br/>
+					-MK20 Series...<br/>
+					-...<br/>
+					2. Toutes armes de policier<br/><br/>
+					-Silenced P07 (Taser)<br/>
+					-SDAR<br/>
+					-...<br/><br/>
+					3.Tout types d’explosifs<br/><br/>
+				"
+		]
+	];
+	player createDiaryRecord ["illegalitems",
+		[
+			"Objets Illegaux",
+				"
+				Les objets suivants sont illegaux :<br/><br/>
+				1. Tortues<br/>
+				2. Héroïne<br/>
+				3. Marijuana<br/>
+				4. Cocaïne<br/><br/>
 				"
 		]
 	];
@@ -549,14 +515,14 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"",
 				"
-				Y: Open Player Menu<br/>
-				U: Lock and unlock cars<br/>
-				F: Cop Siren (if cop)<br/>
-				T: Vehicle Trunk<br/>
-				Left Shift + R: Restrain (Cop Only)<br/>
-				Left Shift + G: Knock out / stun (Civ Only, used for robbing them)<br/>
-				Left Windows: Main Interaction key which is used for picking up items/money, interacting with cars (repair,etc) and for cops to interact with civilians. Can be rebound to a single key like H by pressing ESC->Configure->Controls->Custom->Use Action 10<br/>
-				Left Shift + L: Activates cop siren lights (as a cop).<br/>
+				Y: Ouvrir Menu Joueur<br/>
+				U: Verouiller/Déverouiller Voiture<br/>
+				F: Sirène Police/Ambulance (Si Medecin ou Policier)<br/>
+				T: Coffre Vehicule<br/>
+				Left Shift + R: Menotter (Si Policier)<br/>
+				Left Shift + G: Assomer (Si Civil)<br/>
+				Windows Gauche: Touche d'interaction principale pour prendre objet/argent, intéragir avec les voitures (Réparer,etc) et intéragir avec les civils pour les policiers. Peut être modifiée ESC->Configurer->Controles->Personnalisé->Touche Utilisateur 10<br/>
+				Left Shift + L: Gyrophares (Si Medecin ou Policier).<br/>
 				"
 		]
 	];

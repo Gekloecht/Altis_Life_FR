@@ -14,8 +14,8 @@ _medicsNear = ((findDisplay 7300) displayCtrl 7305);
 
 waitUntil {
 	_nearby = if(([independent,getPosATL player,120] call life_fnc_nearUnits)) then {"Yes"} else {"No"};
-	_medicsOnline ctrlSetText format["Medics Online: %1",[independent] call life_fnc_playerCount];
-	_medicsNear ctrlSetText format["Medics Nearby: %1",_nearby];
+	_medicsOnline ctrlSetText format["Medics En Ligne: %1",[independent] call life_fnc_playerCount];
+	_medicsNear ctrlSetText format["Medics Proches: %1",_nearby];
 	sleep 1;
 	(isNull (findDisplay 7300))
 };
