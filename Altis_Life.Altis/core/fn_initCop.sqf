@@ -26,3 +26,12 @@ if(!(str(player) in ["cop_1","cop_2","cop_3","cop_4"])) then {
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
+
+if(playerSide == west) then {
+    private["_getRank"];
+    _getRank = switch (__GETC__(life_coplevel)) do {case 1: {1}; case 2: {2}; case 3: {3}; case 4: {4}; case 5: {5}; case 6: {6}; case 7: {7}; case 8: {8}; default {0};};
+    player setVariable["coplevel",_getRank,TRUE];
+};
+
+player setObjectTextureGlobal [0,"cop.jpg"]
+[] execVM "statusBar.sqf";

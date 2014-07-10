@@ -519,6 +519,8 @@ player createDiarySubject ["controls","Controls"];
 				U: Verouiller/Déverouiller Voiture<br/>
 				F: Sirène Police/Ambulance (Si Medecin ou Policier)<br/>
 				T: Coffre Vehicule<br/>
+				H: Main derrière la tête<br/>
+				Shift+H: Cacher Arme<br/>
 				Left Shift + R: Menotter (Si Policier)<br/>
 				Left Shift + G: Assomer (Si Civil)<br/>
 				Windows Gauche: Touche d'interaction principale pour prendre objet/argent, intéragir avec les voitures (Réparer,etc) et intéragir avec les civils pour les policiers. Peut être modifiée ESC->Configurer->Controles->Personnalisé->Touche Utilisateur 10<br/>

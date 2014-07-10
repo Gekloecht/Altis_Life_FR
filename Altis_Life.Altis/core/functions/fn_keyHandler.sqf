@@ -52,7 +52,21 @@ switch (_code) do
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
 		};
 	};
-	
+	//H Key
+	case 35:
+	{
+		if(!_alt && !_ctrlKey) then
+		{
+			if (vehicle player == player && !(player getVariable ["restrained", false]) && !(player getVariable ["Escorting", false]) ) then {
+				if (player getVariable ["playerSurrender", false]) then {
+					player setVariable ["playerSurrender", false, true];
+				} else {
+					[] spawn life_fnc_surrender;
+				};
+			};
+			_handled = true;
+		};
+	};
 	//Holster / recall weapon.
 	case 35:
 	{
@@ -73,6 +87,14 @@ switch (_code) do
 	case _interactionKey:
 	{
 		if(!life_action_inUse) then {
+			if(playerSide == west) then
+			{
+				player setObjectTextureGlobal [0, "cop.jpg"];
+			};
+			if(playerSide == independent) then
+			{
+				player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"];
+			};
 			[] spawn 
 			{
 				private["_handle"];
@@ -202,16 +224,16 @@ switch (_code) do
 			if(_veh isKindOf "House_F" && playerSide == civilian) then {
 				if(_veh in life_vehicles && player distance _veh < 8) then {
 					_door = [_veh] call life_fnc_nearestDoor;
-					if(_door == 0) exitWith {hint "You are not near a door!"};
+					if(_door == 0) exitWith {hint "Vous n'êtes pas proche d'une porte!"};
 					_locked = _veh getVariable [format["bis_disabled_Door_%1",_door],0];
 					if(_locked == 0) then {
 						_veh setVariable[format["bis_disabled_Door_%1",_door],1,true];
 						_veh animate [format["door_%1_rot",_door],0];
-						systemChat "You have locked that door.";
+						systemChat "Vous avez verouiller cette porte.";
 					} else {
 						_veh setVariable[format["bis_disabled_Door_%1",_door],0,true];
 						_veh animate [format["door_%1_rot",_door],1];
-						systemChat "You have unlocked that door.";
+						systemChat "Vous avez déverouiller cette porte.";
 					};
 				};
 			} else {
@@ -223,14 +245,16 @@ switch (_code) do
 						} else {
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};
-						systemChat "You have unlocked your vehicle.";
+						systemChat "Vous avez déverouiller votre vehicule";
+						_veh say3D "Beep";
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
 						} else {
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};	
-						systemChat "You have locked your vehicle.";
+						systemChat "Vous avez verouiller votre vehicule.";
+						_veh say3D "BeepBeep";
 					};
 				};
 			};

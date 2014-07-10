@@ -75,6 +75,7 @@ class Life_Client_Core
 	class Actions
 	{
 		file = "core\actions";
+		class surrender {};
 		class buyLicense {};
 		class chemlightUse {};
 		class heal {};
@@ -113,10 +114,22 @@ class Life_Client_Core
 		class gatherCocaine {};
 		class pumpRepair {};
 		class packupSpikes {};
+		class packupBarriere {};
+		class packupCone {};
 		class storeVehicle {};
 		class robAction {};
 		class sellTurtle {};
 		class sellGoldBars {};
+		class gatherDiamond {};
+		class gatherCopper {};
+		class gatherSalt {};
+		class gatherRock {};
+		class gatherSand {};
+		class gatherIron {};
+		class gatherMeth {};
+		class gatherGrapes {};
+		class gatherArtefact {};
+		class seizeObjects {};
 	};
 	
 	class Housing
@@ -165,6 +178,7 @@ class Life_Client_Core
 		class clothing_reb {};
 		class clothing_dive {};
 		class clothing_kart {};
+		class clothing_presse {};
 	};
 
 	class Player_Menu
@@ -281,6 +295,7 @@ class Life_Client_Core
 	class Cop
 	{
 		file = "core\cop";
+		class copEnter {};
 		class copMarkers {};
 		class copLights {};
 		class loadGear {};
@@ -357,6 +372,15 @@ class Life_Client_Core
 		class blastingCharge {};
 		class defuseKit {};
 		class storageBox {};
+		class bankalarmsound {};
+		class CarAlarmSound {};
+		class barriere {};
+		class cone {};
+		class weed {};
+		class alcool {};
+		class heroine {};
+		class meth {};
+		class cocaine {};
 	};
 	
 	class Dialog_Controls

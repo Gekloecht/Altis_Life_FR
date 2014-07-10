@@ -7,7 +7,7 @@
 */
 removeAllContainers player;
 removeAllWeapons player;
-player addUniform "U_BG_Guerilla2_1";
+player addUniform "U_IG_Guerilla2_1";
 player addBackpack "B_Bergen_blk";
 player addItem "FirstAidKit";
 player addItem "FirstAidKit";

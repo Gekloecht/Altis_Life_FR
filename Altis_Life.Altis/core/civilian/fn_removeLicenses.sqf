@@ -33,10 +33,7 @@ switch (_state) do
 	{
 		if(license_civ_driver OR license_civ_air OR license_civ_truck OR license_civ_boat) then {
 			license_civ_driver = false;
-			license_civ_air = false;
-			license_civ_truck = false;
-			license_civ_boat = false;
-			hint "You have lost all your motor vehicle licenses for vehicular manslaughter.";
+			hint "Vous avez perdu votre permis de conduire car vous avez ecraser une personne.";
 		};
 	};
 	
@@ -45,7 +42,7 @@ switch (_state) do
 	{
 		if(license_civ_gun) then {
 			license_civ_gun = false;
-			hint "You have lost your firearms license for manslaughter.";
+			hint "Vous avez perdu votre license d'arme à feu pour avoir tué une personne.";
 		};
 	};
 };

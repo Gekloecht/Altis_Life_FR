@@ -82,9 +82,9 @@ life_thirst = 100;
 life_hunger = 100;
 __CONST__(life_paycheck_period,5); //Five minutes
 life_cash = 0;
-__CONST__(life_impound_car,350);
-__CONST__(life_impound_boat,250);
-__CONST__(life_impound_air,850);
+__CONST__(life_impound_car,2500);
+__CONST__(life_impound_boat,5000);
+__CONST__(life_impound_air,7500);
 life_istazed = false;
 life_my_gang = ObjNull;
 
@@ -95,24 +95,24 @@ switch (playerSide) do
 	case west: 
 	{
 		life_atmcash = 7000; //Starting Bank Money
-		life_paycheck = 500; //Paycheck Amount
+		life_paycheck = 5000; //Paycheck Amount
 	};
 	case civilian: 
 	{
-		life_atmcash = 3000; //Starting Bank Money
-		life_paycheck = 350; //Paycheck Amount
+		life_atmcash = 15000; //Starting Bank Money
+		life_paycheck = 2500; //Paycheck Amount
 	};
 	
 	case independent: {
 		life_atmcash = 6500;
-		life_paycheck = 450;
+		life_paycheck = 2500;
 	};
 };
 
 /*
 	Master Array of items?
 */
-life_vShop_rentalOnly = ["B_MRAP_01_hmg_F","B_G_Offroad_01_armed_F"];
+life_vShop_rentalOnly = ["B_MRAP_01_hmg_F","B_G_Offroad_01_armed_F","O_MRAP_02_hmg_F"];
 __CONST__(life_vShop_rentalOnly,life_vShop_rentalOnly); //These vehicles can never be bought and only 'rented'. Used as a balancer & money sink. If you want your server to be chaotic then fine.. Remove it..
 
 life_inv_items = 
@@ -164,7 +164,17 @@ life_inv_items =
 	"life_inv_boltcutter",
 	"life_inv_defusekit",
 	"life_inv_storagesmall",
-	"life_inv_storagebig"
+	"life_inv_storagebig",
+	"life_inv_barriere",
+	"life_inv_cone",
+	"life_inv_methu",
+	"life_inv_methp",
+	"life_inv_moonshine",
+	"life_inv_vodka",
+	"life_inv_grapes",
+	"life_inv_artefact",
+    "life_inv_ephedrine",
+	"life_inv_phosphore"
 ];
 
 //Setup variable inv vars.
@@ -212,7 +222,7 @@ sell_array =
 [
 	["apple",50],
 	["heroinu",1850],
-	["heroinp",2650],
+	["heroinp",4600],
 	["salema",45],
 	["ornate",40],
 	["mackerel",175],
@@ -220,30 +230,38 @@ sell_array =
 	["mullet",250],
 	["catshark",300],
 	["rabbit",65],
-	["oilp",3200],
-	["turtle",3000],
+	["oilp",2900],
+	["turtle",7000],
 	["water",5],
 	["coffee",5],
 	["turtlesoup",1000],
 	["donuts",60],
-	["marijuana",2350],
+	["marijuana",3200],
 	["tbacon",25],
 	["lockpick",75],
 	["pickaxe",750],
 	["redgull",200],
 	["peach",55],
 	["cocaine",3000],
-	["cocainep",5000],
+	["cocainep",5400],
 	["diamond",750],
-	["diamondc",2000],
-	["iron_r",3200],
-	["copper_r",1500],
-	["salt_r",1650],
-	["glass",1450],
+	["diamondc",3900],
+	["iron_r",1500],
+	["copper_r",1000],
+	["salt_r",2600],
+	["glass",1250],
 	["fuelF",500],
 	["spikeStrip",1200],
-	["cement",1950],
-	["goldbar",95000]
+	["cement",2200],
+	["goldbar",95000],
+	["methu",400],
+	["methp",9000],
+	["moonshine",3000],
+	["vodka",900],
+	["grapes",60],
+	["artefact",1500],
+	["ephedrine",400],
+	["phosphore",400]
 ];
 __CONST__(sell_array,sell_array);
 
@@ -273,7 +291,10 @@ buy_array =
 	["boltcutter",7500],
 	["defusekit",2500],
 	["storagesmall",75000],
-	["storagebig",150000]
+	["storagebig",150000],
+	["barriere",1000],
+	["cone",100],
+	["phosphore",1000]
 ];
 __CONST__(buy_array,buy_array);
 

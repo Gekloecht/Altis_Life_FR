@@ -48,6 +48,8 @@ switch (_item) do
 	case "cocaine": {6};
 	case "cocainep": {4};
 	case "spikeStrip": {15};
+	case "barriere": {1};
+	case "cone": {1};
 	case "rock": {6};
 	case "cement": {5};
 	case "goldbar": {12};
@@ -56,5 +58,12 @@ switch (_item) do
 	case "defusekit": {2};
 	case "storagesmall": {5};
 	case "storagebig": {10};
+	case "phosphore ": {3};
+	case "methu": {5};
+	case "methp": {4};
+	case "vodka": {4};
+	case "moonshine": {4};
+	case "grapes": {5};
+	case "artefact": {5};
 	default {1};
 };
