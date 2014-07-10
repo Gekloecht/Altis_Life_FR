@@ -25,7 +25,7 @@ if((getPlayerUID player) != _this select 0) exitWith {[] call SOCK_fnc_dataQuery
 life_cash = parseNumber (_this select 2);
 life_atmcash = parseNumber (_this select 3);
 __CONST__(life_adminlevel,parseNumber(_this select 4));
-__CONST__(life_donator,0);
+__CONST__(life_donator,parseNumber(_this select 5));
 
 //Loop through licenses
 if(count (_this select 6) > 0) then {
@@ -33,7 +33,6 @@ if(count (_this select 6) > 0) then {
 		missionNamespace setVariable [(_x select 0),(_x select 1)];
 	} foreach (_this select 6);
 };
-
 //Parse side specific information.
 switch(playerSide) do {
 	case west: {
@@ -64,5 +63,26 @@ switch(playerSide) do {
 		__CONST__(life_copLevel,0);
 	};
 };
+
+
+switch(__GETC__(life_donator)) do
+ {
+	case 0: {__CONST__(life_houseLimit,1);};
+ 	case 1: {__CONST__(life_houseLimit,2);};
+ 	case 2: {__CONST__(life_houseLimit,3);};
+ 	case 3: {__CONST__(life_houseLimit,4);};
+	case 4: {__CONST__(life_houseLimit,5);};
+	case 5: {__CONST__(life_houseLimit,6);};
+ };
+
+switch(__GETC__(life_donator)) do
+ {
+ 	case 1: {life_paycheck = life_paycheck + 750;};
+ 	case 2: {life_paycheck = life_paycheck + 1500;};
+ 	case 3: {life_paycheck = life_paycheck + 2000;};
+	case 4: {life_paycheck = life_paycheck + 2500;};
+	case 5: {life_paycheck = life_paycheck + 3000;};
+ };
+
 
 life_session_completed = true;
