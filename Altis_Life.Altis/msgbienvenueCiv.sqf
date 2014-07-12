@@ -11,7 +11,7 @@ waitUntil { alive player };
 //waituntil {!isnull (finddisplay 46)};
 showCinemaBorder true;
 camUseNVG false;
-//playsound "Intro";
+playsound "Intro";
 _camera = "camera" camCreate [(position player select 0)-2, position player select 1,(position player select 2)+_camDistance];
 _camera cameraEffect ["internal","back"];
  
@@ -47,7 +47,7 @@ _role3names = ["ts3.dedizones.com:11009"];
 _role4 = "Attention";
 _role4names = ["Serveur Rôle Play - Only French "];
 _role5 = "Merci de lire";
-_role5names = ["Les règles sont sur le forum, les plaintes sont a déposer sur le forum. Bon jeu a tous !"];
+_role5names = ["Les règles sont sur le forum, Merci d'en prendre connaissance. Bon jeu a tous !"];
 
 
 {

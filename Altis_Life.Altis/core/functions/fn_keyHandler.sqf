@@ -5,7 +5,7 @@
 	Description:
 	Main key handler for event 'keyDown'
 */
-private ["_handled","_shift","_alt","_code","_ctrl","_alt","_ctrlKey","_veh","_locked","_interactionKey","_mapKey","_interruptionKeys"];
+private ["_handled","_shift","_alt","_code","_ctrl","_alt","_ctrlKey","_veh","_locked","_interactionKey","_mapKey","_interruptionKeys","_player"];
 _ctrl = _this select 0;
 _code = _this select 1;
 _shift = _this select 2;
@@ -18,6 +18,7 @@ _interactionKey = if(count (actionKeys "User10") == 0) then {219} else {(actionK
 _mapKey = actionKeys "ShowMap" select 0;
 //hint str _code;
 _interruptionKeys = [17,30,31,32]; //A,S,W,D
+_player = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 
 //Vault handling...
 if((_code in (actionKeys "GetOver") || _code in (actionKeys "salute")) && {(player getVariable ["restrained",false])}) exitWith {
@@ -206,11 +207,43 @@ switch (_code) do
 					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
 				} else {
 					//I do not have a custom sound for this and I really don't want to go digging for one, when you have a sound uncomment this and change medicSiren.sqf in the medical folder.
-					//[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
+				[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
 				};
 			};
 		};
 	};
+	
+	//Report ALT-F4
+	
+	case 62:
+    {
+    if(_alt && !_shift) then {
+    diag_log format ["Anti-Cheat: %1 utilise ALT+F4 pour se deconnecter (Merci de le report aux Admins)",_player getVariable["realname",name _player]];
+    [[1,format["Anti-Cheat: %1 utilise ALT+F4 pour se deconnecter (Merci de le report aux Admins)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+    };
+    };
+    case 211:
+    {
+    if(_ctrlKey && _alt)  then {
+    diag_log format ["Anti-Cheat: %1 utilise CTRL + ALT + DEL pour se deconnecter (Merci de le report aux Admins)",_player getVariable["realname",name _player]];
+    [[1,format["Anti-Cheat: %1 utilise CTRL + ALT + DEL  pour se deconnecter (Merci de le report aux Admins)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+    };
+    };
+    case 15:
+    {
+    if( _alt)  then {
+    diag_log format ["Anti-Cheat: %1 utilise ALT + TAB pour se deconnecter (Merci de le report aux Admins)",_player getVariable["realname",name _player]];
+    [[1,format["Anti-Cheat: %1 utilise ALT + TAB pour se deconnecter (Merci de le report aux Admins)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+    };
+    };
+    case 1:
+    {
+    if( _ctrlKey )  then {
+    diag_log format ["Anti-Cheat: %1 utilise CTRL + ESC pour se deconnecter (Merci de le report aux Admins)",_player getVariable["realname",name _player]];
+    [[1,format["Anti-Cheat: %1 utilise CTRL + ESC pour se deconnecter (Merci de le report aux Admins)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+    };
+    };
+	
 	//U Key
 	case 22:
 	{

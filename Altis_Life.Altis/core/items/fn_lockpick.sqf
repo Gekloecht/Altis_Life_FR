@@ -1,19 +1,19 @@
 /*
 	File: fn_lockpick.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Main functionality for lock-picking.
 */
-private["_curTarget","_car","_distance","_isVehicle","_title","_progressBar","_cP","_titleText","_dice","_badDistance"];
+private["_curTarget","_distance","_isVehicle","_title","_progressBar","_cP","_titleText","_dice","_badDistance"];
 _curTarget = cursorTarget;
 life_interrupted = false;
 if(life_action_inUse) exitWith {};
 if(isNull _curTarget) exitWith {}; //Bad type
 _distance = ((boundingBox _curTarget select 1) select 0) + 2;
 if(player distance _curTarget > _distance) exitWith {}; //Too far
-_isVehicle = if((_curTarget isKindOf "LandVehicle") OR (_curTarget isKindOf "Ship") /*OR (_curTarget isKindOf "Air")*/) then {true} else {false};
-if(_isVehicle && _curTarget in life_vehicles) exitWith {hint "This vehicle is already in your key-chain."};
+_isVehicle = if((_curTarget isKindOf "LandVehicle") OR (_curTarget isKindOf "Ship") OR (_curTarget isKindOf "Air")) then {true} else {false};
+if(_isVehicle && _curTarget in life_vehicles) exitWith {hint "Vous avez deja la clé de ce véhicule."};
 
 //More error checks
 if(!_isVehicle && !isPlayer _curTarget) exitWith {};
@@ -21,7 +21,6 @@ if(!_isVehicle && !(_curTarget getVariable["restrained",false])) exitWith {};
 
 _title = format["Lock-picking %1",if(!_isVehicle) then {"Handcuffs"} else {getText(configFile >> "CfgVehicles" >> (typeOf _curTarget) >> "displayName")}];
 life_action_inUse = true; //Lock out other actions
-
 
 //Setup the progress bar
 disableSerialization;
@@ -40,6 +39,12 @@ while {true} do
 		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
 	};
 	sleep 0.26;
+	if(isNull _ui) then {
+		5 cutRsc ["life_progress","PLAIN"];
+		_ui = uiNamespace getVariable "life_progress";
+		_progressBar = _ui displayCtrl 38201;
+		_titleText = _ui displayCtrl 38202;
+	};
 	_cP = _cP + 0.01;
 	_progressBar progressSetPosition _cP;
 	_titleText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_title];
@@ -56,7 +61,7 @@ player playActionNow "stop";
 if(!alive player OR life_istazed) exitWith {life_action_inUse = false;};
 if((player getVariable["restrained",false])) exitWith {life_action_inUse = false;};
 if(!isNil "_badDistance") exitWith {titleText["Vous êtes trop loin de la cible.","PLAIN"]; life_action_inUse = false;};
-if(life_interrupted) exitWith {life_interrupted = false; titleText["Action annulée","PLAIN"]; life_action_inUse = false;};
+if(life_interrupted) exitWith {life_interrupted = false; titleText["Action Annulée","PLAIN"]; life_action_inUse = false;};
 if(!([false,"lockpick",1] call life_fnc_handleInv)) exitWith {life_action_inUse = false;};
 
 life_action_inUse = false;
@@ -68,13 +73,12 @@ if(!_isVehicle) then {
 } else {
 	_dice = random(100);
 	if(_dice < 30) then {
-		titleText["Vous avez crocheté le véhicule.","PLAIN"];		
+		titleText["Vous avez réussi le crochetage.","PLAIN"];
 		life_vehicles set[count life_vehicles,_curTarget];
-		[[getPlayerUID player,name player,"487"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+		[[getPlayerUID player,player getVariable["realname",name player],"487"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 	} else {
-		[[_curTarget],"life_fnc_CarAlarmSound",nil,true] spawn life_fnc_MP;
-		[[getPlayerUID player,name player,"215"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
-		[[0,format["%1 a été vu entrain de crocheter une voiture.",name player]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
-		titleText["Le crochetage a échoué.","PLAIN"];
+		[[getPlayerUID player,player getVariable["realname",name player],"215"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+		[[0,format["%1 a été vu crochetant un vehicule.",player getVariable["realname",name player]]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+		titleText["The lockpick a cassé.","PLAIN"];
 	};
 };

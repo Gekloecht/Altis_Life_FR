@@ -48,6 +48,13 @@ class CfgSounds
 		titles[] = {};
 	};
 	
+	class SirenMedic
+	{
+		name = "SirenMedic";
+		sound[] = {"\sounds\Siren_Medic.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	
 	class tazersound
 	{
 		name = "Tazersound";
@@ -63,11 +70,11 @@ class CfgSounds
 	};
 	
 	class Intro
-  {
-    name="Intro";
-    sound[]={"\sounds\intro.ogg",0.9,1};
-    titles[] = {};
-  };
+	  {
+		name="Intro";
+		sound[]={"\sounds\intro.ogg",0.9,1};
+		titles[] = {};
+	  };
   
     class reverse_truck
   {

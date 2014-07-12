@@ -29,15 +29,12 @@ switch(playerSide) do
 {
 	case west: {
 		[] spawn life_fnc_loadGear;
-		[] call life_fnc_setupActions;
 	};
 	case civilian: {
 		[] call life_fnc_civFetchGear;
-		[] call life_fnc_setupActions;
 	};
 	case independent: {
 		[] call life_fnc_medicLoadout;
-		[] call life_fnc_setupActions;
 	};
 };
 
