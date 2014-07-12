@@ -9,5 +9,5 @@ while {true} do {
 	if(isNull _this OR !alive _this) exitWith {};
 	if(isNil {_this getVariable "mining"}) exitWith {};
 	_this say3D "MachineMinage";
-	sleep 5;
+	sleep 4.7;
 };
