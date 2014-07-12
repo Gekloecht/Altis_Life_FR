@@ -14,4 +14,5 @@ if(([true,"turtle",1] call life_fnc_handleInv)) then
 {
 	deleteVehicle _obj;
 	titleText[localize "STR_NOTF_CaughtTurtle","PLAIN"];
+	playSound "bag";
 };

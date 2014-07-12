@@ -27,6 +27,7 @@ if(_sum > 0) then
 	if(([true,"salt",_sum] call life_fnc_handleInv)) then
 	{
 		titleText[format["Vous avez collecté %1 sel",_sum],"PLAIN"];
+		playSound "bag";
 	};
 };
 

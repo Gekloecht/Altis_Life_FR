@@ -13,5 +13,6 @@ if(isNil "_barriere") exitWith {};
 if(([true,"barriere",1] call life_fnc_handleInv)) then
 {
 	titleText["Vous avez ramassé votre barrière.","PLAIN"];
+	playSound "bag";
 	deleteVehicle _barriere;
 };

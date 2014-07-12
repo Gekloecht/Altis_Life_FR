@@ -27,6 +27,7 @@ if(_sum > 0) then
 	if(([true,"rock",_sum] call life_fnc_handleInv)) then
 	{
 		titleText[format["Vous avez collecté %1 roches",_sum],"PLAIN"];
+		playSound "bag";
 	};
 };
 

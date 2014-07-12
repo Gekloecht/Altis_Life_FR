@@ -26,4 +26,5 @@ if(([true,_type,1] call life_fnc_handleInv)) then
 {
 	deleteVehicle _fish;
 	titleText[format[(localize "STR_NOTF_Fishing"),_type],"PLAIN"];
+	playSound "bag";
 };

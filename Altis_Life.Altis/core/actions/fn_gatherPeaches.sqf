@@ -17,6 +17,7 @@ if(_sum > 0) then
 	if(([true,"peach",_sum] call life_fnc_handleInv)) then
 	{
 		titleText[format[localize "STR_NOTF_Picked",_sum,localize "STR_Item_Peaches"],"PLAIN"];
+		playSound "bag";
 	};
 }
 	else

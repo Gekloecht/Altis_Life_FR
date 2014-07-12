@@ -41,6 +41,14 @@ class CfgFunctions
 class CfgSounds
 {
 	sounds[] = {};
+	
+	class MachineMinage
+	{
+		name = "MachineMinage";
+		sound[] = {"\sounds\minage_machine_altislifefr.ogg", 1.0, 1};
+		titles[] = {};
+	}
+	
 	class SirenLong
 	{
 		name = "SirenLong";

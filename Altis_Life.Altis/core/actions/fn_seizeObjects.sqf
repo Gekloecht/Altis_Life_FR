@@ -18,3 +18,4 @@ do
 };
 
 titleText[format["Seized %1 ground objects in the vicinity.", _destroyed],"PLAIN"];
+playSound "bag";

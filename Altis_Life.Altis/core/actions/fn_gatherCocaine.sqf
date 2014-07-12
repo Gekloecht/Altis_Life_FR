@@ -16,6 +16,7 @@ if(_sum > 0) then
 	if(([true,"cocaine",1] call life_fnc_handleInv)) then
 	{
 		titleText[format[localize "STR_NOTF_Collected",localize "STR_Item_Cocaine"],"PLAIN"];
+		playSound "bag";
 	};
 };
 

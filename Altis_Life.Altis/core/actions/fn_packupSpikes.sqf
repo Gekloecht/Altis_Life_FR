@@ -12,6 +12,7 @@ if(isNil "_spikes") exitWith {};
 if(([true,"spikeStrip",1] call life_fnc_handleInv)) then
 {
 	titleText["You have packed up the spike strip.","PLAIN"];
+	playSound "bag";
 	player removeAction life_action_spikeStripPickup;
 	life_action_spikeStripPickup = nil;
 	deleteVehicle _spikes;

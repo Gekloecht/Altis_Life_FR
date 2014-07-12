@@ -13,5 +13,6 @@ if(isNil "_cone") exitWith {};
 if(([true,"cone",1] call life_fnc_handleInv)) then
 {
 	titleText["Vous avez ramassé votre cône.","PLAIN"];
+	playSound "bag";
 	deleteVehicle _cone;
 };

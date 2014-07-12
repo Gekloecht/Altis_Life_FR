@@ -18,5 +18,6 @@ if(isNull _vehicle) exitWith {};
 hint "Selling vehicle please wait....";
 life_action_inUse = true;
 _price2 = life_cash + _price;
+playSound "caching";
 [[player,_vehicle,_price,_price2],"TON_fnc_chopShopSell",false,false] spawn life_fnc_MP;
 closeDialog 0;

@@ -17,6 +17,7 @@ _price = 0;
 } foreach life_clothing_purchase;
 
 if(_price > life_cash) exitWith {titleText["Sorry sir, you don't have enough money to buy those clothes.","PLAIN"];};
+playSound "caching";
 life_cash = life_cash - _price;
 
 life_clothesPurchased = true;
