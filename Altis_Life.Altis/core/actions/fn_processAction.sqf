@@ -78,7 +78,7 @@ while{true} do {
 };
 
 
-if(player distance _vendor > 10) exitWith {hint "Vous devez rester proche du vendeur."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if(player distance _vendor > 5) exitWith {hint "Vous devez rester proche du vendeur."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 if((!_hasLicense)&&(life_cash < _cost)) exitWith {hint format["Vous avez besoin de $%1 pour traiter sans licence!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 if(!(alive player)) exitWith {hint "Vous devez être en vie pour traiter."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 //Removes the old items
