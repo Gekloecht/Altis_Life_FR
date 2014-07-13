@@ -99,7 +99,7 @@ switch (playerSide) do
 	};
 	case civilian: 
 	{
-		life_atmcash = 15000; //Starting Bank Money
+		life_atmcash = 10000; //Starting Bank Money
 		life_paycheck = 2500; //Paycheck Amount
 	};
 	
@@ -242,7 +242,7 @@ sell_array =
 	["donuts",60],
 	["marijuana",3200],
 	["tbacon",25],
-	["lockpick",75],
+	["lockpick",2500],
 	["pickaxe",750],
 	["redgull",200],
 	["peach",55],

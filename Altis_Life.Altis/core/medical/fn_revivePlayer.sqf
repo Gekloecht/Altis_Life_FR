@@ -61,11 +61,11 @@ if((player getVariable["restrained",false])) exitWith {life_action_inUse = false
 if(!isNil "_badDistance") exitWith {titleText["Vous êtes trop loin.","PLAIN"]; life_action_inUse = false;};
 if(life_interrupted) exitWith {life_interrupted = false; titleText["Action annulée","PLAIN"]; life_action_inUse = false;};
 
-life_atmcash = life_atmcash + (call life_revive_fee);
+life_atmcash = life_atmcash + 5000;
 life_action_inUse = false;
 _target setVariable["Revive",TRUE,TRUE];
 [[player getVariable["realname",name player]],"life_fnc_revived",_target,FALSE] spawn life_fnc_MP;
-titleText[format["Vous avez réanimé %1 et avez recu $%2 pour vos services.",_targetName,[(call life_revive_fee)] call life_fnc_numberText],"PLAIN"];
+titleText[format["Vous avez réanimé %1 et avez reçu 5000$ pour vos services.",_targetName,[(call life_revive_fee)] call life_fnc_numberText],"PLAIN"];
 
 sleep 0.6;
 player reveal _target;

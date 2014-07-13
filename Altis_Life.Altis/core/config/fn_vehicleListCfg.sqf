@@ -15,10 +15,10 @@ switch (_shop) do
 	case "kart_shop":
 	{
 		_return = [
-			["C_Kart_01_Blu_F",15000],
-			["C_Kart_01_Fuel_F",15000],
-			["C_Kart_01_Red_F",15000],
-			["C_Kart_01_Vrana_F",15000]
+			["C_Kart_01_Blu_F",100000],
+			["C_Kart_01_Fuel_F",100000],
+			["C_Kart_01_Red_F",100000],
+			["C_Kart_01_Vrana_F",100000]
 		];
 	};
 	case "med_shop":
@@ -42,8 +42,7 @@ switch (_shop) do
 	{
 		_return = 
 		[
-			["B_Quadbike_01_F",2500],
-			["C_Hatchback_01_F",9500],
+			["C_Hatchback_01_F",5000],
 			["C_Offroad_01_F",12500],
 			["C_SUV_01_F",35000],
 			["C_Van_01_transport_F",40000],
@@ -67,7 +66,6 @@ switch (_shop) do
 	{
 		_return =
 		[
-			["B_Quadbike_01_F",500],
 			["C_Offroad_01_F",2500],
 			["C_Van_01_Fuel_F",7500],
 			["C_SUV_01_F",20000],
@@ -85,9 +83,8 @@ switch (_shop) do
 	{
 		_return =
 		[
-			["B_Quadbike_01_F",2500],
 			["B_G_Offroad_01_F",15000],
-			["O_MRAP_02_F",150000],
+			["O_MRAP_02_F",1000000],
 			["B_Heli_Light_01_F",325000],
 			["O_Heli_Light_02_unarmed_F",850000]
 		];
@@ -95,7 +92,7 @@ switch (_shop) do
 		if(license_civ_rebel) then
 		{
 			_return set[count _return,
-			["B_G_Offroad_01_armed_F",750000]];
+			["B_G_Offroad_01_armed_F",1500000]];
 			_return set[count _return,
 			["O_MRAP_02_hmg_F",5000000]];
 		};

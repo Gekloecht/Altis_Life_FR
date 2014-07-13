@@ -11,20 +11,20 @@ _uid = getPlayerUID player;
 
 if(isNull _house) exitWith {};
 if(!(_house isKindOf "House_F")) exitWith {};
-if((_house getVariable["house_owned",false])) exitWith {hint "This house is already owned even though you shouldn't be seeing this hint..."};
-if(!isNil {(_house getVariable "house_sold")}) exitWith {hint "This house was recently sold and is still processing in the database."};
-if(!license_civ_home) exitWith {hint "You do not have a home owners license!"};
-if(count life_houses >= (__GETC__(life_houseLimit))) exitWith {hint format["You can only own %1 houses at a time.",__GETC__(life_houseLimit)]};
+if((_house getVariable["house_owned",false])) exitWith {hint "Cette maison n'est pas a vendre..."};
+if(!isNil {(_house getVariable "house_sold")}) exitWith {hint "Cette maison a été récemment vendue."};
+if(!license_civ_home) exitWith {hint "Vous n'avez pas de license propriétaire!"};
+if(count life_houses >= (__GETC__(life_houseLimit))) exitWith {hint format["Vous pouvez avoir maximum %1 maison à la fois.",__GETC__(life_houseLimit)]};
 closeDialog 0;
 
 _houseCfg = [(typeOf _house)] call life_fnc_houseConfig;
 if(count _houseCfg == 0) exitWith {};
-if(life_atmcash < (_houseCfg select 0)) exitWith {hint "You do not have enough money!"};
+if(life_atmcash < (_houseCfg select 0)) exitWith {hint "Vous n'avez pas assez d'argent!"};
 
 _action = [
-	format["This house is available for <t color='#8cff9b'>$%1</t><br/>It supports up to %2 storage containers",
+	format["Cette maison est à vendre pour <t color='#8cff9b'>$%1</t><br/>Elle peut contenir jusu'à %2 coffre",
 	[(_houseCfg select 0)] call life_fnc_numberText,
-	(_houseCfg select 1)],"Purchase House","Buy","Cancel"
+	(_houseCfg select 1)],"Acheter Maison","Acheter","Annuler"
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {

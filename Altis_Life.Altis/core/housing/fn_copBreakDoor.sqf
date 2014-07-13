@@ -7,17 +7,17 @@
 private["_house","_door","_title","_titleText","_progressBar","_cpRate","_cP"];
 _house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _house OR !(_house isKindOf "House_F")) exitWith {};
-if(isNil {(_house getVariable "house_owner")}) exitWith {hint "This house doesn't belong to anyone."};
+if(isNil {(_house getVariable "house_owner")}) exitWith {hint "Cette maison n'appartient à personne."};
 
 _door = [_house] call life_fnc_nearestDoor;
-if(_door == 0) exitWith {hint "You are not near a door!"};
-if((_house getVariable[format["bis_disabled_Door_%1",_door],0]) == 0) exitWith {hint "The door is already unlocked!"};
+if(_door == 0) exitWith {hint "Vous n'êtes pas pret d'une porte!"};
+if((_house getVariable[format["bis_disabled_Door_%1",_door],0]) == 0) exitWith {hint "Le porte est deja déverouillée!"};
 
 life_action_inUse = true;
 
 //Setup the progress bar
 disableSerialization;
-_title = "Breaking lock on door";
+_title = "Forcer serrure";
 5 cutRsc ["life_progress","PLAIN"];
 _ui = uiNamespace getVariable "life_progress";
 _progressBar = _ui displayCtrl 38201;
@@ -27,7 +27,7 @@ _progressBar progressSetPosition 0.01;
 _cP = 0.01;
 _cpRate = 0.0092;
 
-[[2,format["%1 your house is being raided by the cops!",(_house getVariable "house_owner") select 1]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[2,format["%1 Votre maison se fait raid par la police!",(_house getVariable "house_owner") select 1]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
 while {true} do
 {
@@ -51,7 +51,7 @@ while {true} do
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
 if(!alive player) exitWith {life_action_inUse = false;};
-if(life_interrupted) exitWith {life_interrupted = false; titleText["Action cancelled","PLAIN"]; life_action_inUse = false;};
+if(life_interrupted) exitWith {life_interrupted = false; titleText["Action annulée","PLAIN"]; life_action_inUse = false;};
 life_action_inUse = false;
 _house animate [format["door_%1_rot",_door],1];
 _house setVariable[format["bis_disabled_Door_%1",_door],0,true]; //Unlock the door.
