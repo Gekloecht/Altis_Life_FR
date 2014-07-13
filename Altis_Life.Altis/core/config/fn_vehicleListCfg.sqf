@@ -73,7 +73,7 @@ switch (_shop) do
 			["C_Hatchback_01_sport_F",50000],
 			["B_Heli_Light_01_F",200000],
 			["B_Truck_01_box_F",250000],
-			["O_Truck_03_device_F",450000],
+			["O_Truck_03_device_F",800000],
 			["O_Heli_Light_02_unarmed_F",600000],
 			["I_Heli_Transport_02_F",1200000]
 		];
@@ -85,6 +85,9 @@ switch (_shop) do
 		[
 			["B_G_Offroad_01_F",15000],
 			["O_MRAP_02_F",1000000],
+			["O_Truck_03_transport_F",1000000],
+			["O_Truck_03_covered_F",1350000],			
+			["O_Truck_03_ammo_F",1500000],
 			["B_Heli_Light_01_F",325000],
 			["O_Heli_Light_02_unarmed_F",850000]
 		];

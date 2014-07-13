@@ -24,15 +24,15 @@ switch (_filter) do
 			["U_IG_Guerilla2_1","Buttonup Black",500],
 			["U_IG_Guerilla2_2","Buttonup Checked",500],
 			["U_IG_Guerilla2_3","Buttonup Navy",500],
-			["U_IG_Guerilla1_1",nil,5000],
-			["U_I_G_Story_Protagonist_F",nil,7500],
-			["U_I_G_resistanceLeader_F",nil,11500],
-			["U_O_SpecopsUniform_ocamo",nil,17500],
-			["U_O_CombatUniform_oucamo",nil,17500],
-			["U_O_PilotCoveralls",nil,15610],
-			["U_IG_leader","Guerilla Leader",15340],
-			["U_O_GhillieSuit",nil,50000],
-			["U_I_GhillieSuit",nil,50000]
+			["U_IG_Guerilla1_1",nil,20000],
+			["U_I_G_Story_Protagonist_F",nil,50000],
+			["U_I_G_resistanceLeader_F",nil,50000],
+			["U_O_SpecopsUniform_ocamo",nil,50000],
+			["U_O_CombatUniform_oucamo",nil,50000],
+			["U_O_PilotCoveralls",nil,50000],
+			["U_IG_leader","Guerilla Leader",50000],
+			["U_O_GhillieSuit",nil,100000],
+			["U_I_GhillieSuit",nil,100000]
 		];
 	};
 	
