@@ -40,6 +40,10 @@ switch (_mode) do
 			case "cement": {_var = "license_civ_cement"};
 			case "mair": {_var = "license_med_air"};
 			case "home": {_var = "license_civ_home"};
+			case "meth": {_var = "license_civ_meth"};
+			case "grapes": {_var = "license_civ_grapes"};
+			case "moonshine": {_var = "license_civ_moonshine"};
+			case "presse": {_var = "license_civ_presse"};
 			default {_var = ""};
 		};
 	};
@@ -72,6 +76,10 @@ switch (_mode) do
 			case "license_civ_cement": {_var = "cement"};
 			case "license_med_air": {_var = "mair"};
 			case "license_civ_home": {_var = "home"};
+			case "license_civ_meth": {_var = "meth"};
+			case "license_civ_grapes": {_var = "grapes"};
+			case "license_civ_moonshine": {_var = "moonshine"};
+			case "license_civ_presse": {_var = "presse"};
 			default {_var = ""};
 		};
 	};

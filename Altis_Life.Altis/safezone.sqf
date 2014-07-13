@@ -9,7 +9,7 @@
 */
 
 #define SAFETY_ZONES    [["safezone_kavala", 400],["safezone_athira", 100],["safezone_pomme", 60],["safezone_pomme2", 60],["safezone_donator", 150],["safezone_reb", 180],["safezone_sofia", 180],["safezone_pyrgos", 180]] // Syntax: [["marker1", radius1], ["marker2", radius2], ...]
-#define MESSAGE "Vous êtes dans une safezone, Vous ne pouvez pas entreprendre d'action agressive."
+#define MESSAGE "Vous etes dans une safezone, Vous ne pouvez pas entreprendre d'action agressive."
 
      if (isDedicated) exitWith {};
      waitUntil {!isNull player};
