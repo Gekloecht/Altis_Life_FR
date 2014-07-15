@@ -74,7 +74,6 @@ switch (_vehicle) do
 			["#(argb,8,8,3)color(0.02,0.47,0.62,0.1)","civ"],
 			["#(argb,8,8,3)color(1,0.6,0,0.1)","civ"],
 			["#(ai,64,64,1)Fresnel(0.3,3)","civ"],
-			["textures\offroad_depannage.jpg","civ"],
 			["textures\med_offroad.jpg","med"]
 		];
 	};

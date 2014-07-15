@@ -55,8 +55,9 @@ switch (_shop) do
 		_return =
 		[
 			["C_Van_01_box_F",60000],
+			["C_Offroad_01_repair_F",75000],
 			["I_Truck_02_transport_F",75000],
-			["I_Truck_02_covered_F",100000],
+      		["I_Truck_02_covered_F",100000],
 			["B_Truck_01_transport_F",200000],
 			["B_Truck_01_covered_F",400000]
 		];	
@@ -73,7 +74,7 @@ switch (_shop) do
 			["C_Hatchback_01_sport_F",50000],
 			["B_Heli_Light_01_F",200000],
 			["B_Truck_01_box_F",250000],
-			["O_Truck_03_device_F",800000],
+			["O_Truck_03_device_F",750000],
 			["O_Heli_Light_02_unarmed_F",600000],
 			["I_Heli_Transport_02_F",1200000]
 		];
@@ -84,6 +85,7 @@ switch (_shop) do
 		_return =
 		[
 			["B_G_Offroad_01_F",15000],
+			["B_G_Van_01_transport_F",50000],
 			["O_MRAP_02_F",1000000],
 			["O_Truck_03_transport_F",1000000],
 			["O_Truck_03_covered_F",1350000],			

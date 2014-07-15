@@ -340,15 +340,15 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are not a civilian!"};
-			case (!license_civ_rebel): {"You don't have a Rebel training license!"};
+			case (!license_civ_rebel): {"Vous n'avez pas de licence rebelle !"};
 			default
 			{
 				["Mohammed's Jihadi Shop",
 					[
-						["arifle_TRG20_F",nil,120000],
-						["arifle_Katiba_F",nil,200000],
-						["srifle_DMR_01_F",nil,250000],
-						["arifle_SDAR_F",nil,60000],
+						["arifle_TRG20_F",nil,80000],
+						["arifle_Katiba_F",nil,100000],
+						["srifle_DMR_01_F",nil,150000],
+						["arifle_SDAR_F",nil,30000],
 						["optic_ACO_grn",nil,3500],
 						["optic_Holosight",nil,3600],
 						["acc_flashlight",nil,1000],
@@ -370,18 +370,18 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are not a civilian!"};
-			case (!license_civ_gun): {"You don't have a Firearms license!"};
+			case (!license_civ_gun): {"Vous n'avez pas de license d'arme à feu !"};
 			default
 			{
 				["Billy Joe's Firearms",
 					[
-						["hgun_Rook40_F",nil,15000],
+						["hgun_Rook40_F",nil,10000],
 						["16Rnd_9x21_Mag",nil,25],
-						["hgun_Pistol_heavy_02_F",nil,17000],
+						["hgun_Pistol_heavy_02_F",nil,12000],
 						["6Rnd_45ACP_Cylinder",nil,50],
-						["hgun_ACPC2_F",nil,20000],
+						["hgun_ACPC2_F",nil,15000],
 						["9Rnd_45ACP_Mag",nil,45],
-						["hgun_PDW2000_F",nil,30000],
+						["hgun_PDW2000_F",nil,20000],
 						["30Rnd_9x21_Mag",nil,75],
 						["SMG_01_F",nil,28000],
 						["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,60],
@@ -397,13 +397,13 @@ switch(_shop) do
 	{
 				["Donator Shop",
 					[
-						["hgun_Rook40_F",nil,10000],
-						["hgun_PDW2000_F",nil,20000],
-						["SMG_01_F",nil,50000],
+						["hgun_Rook40_F",nil,8000],
+						["hgun_PDW2000_F",nil,15000],
+						["SMG_01_F",nil,20000],
 						["arifle_Mk20C_plain_F",nil,100000],
-						["LMG_Mk200_F",nil,300000],
-						["LMG_Zafir_F",nil,450000],
-						["srifle_GM6_F",nil,600000],
+						["LMG_Mk200_F",nil,250000],
+						["LMG_Zafir_F",nil,400000],
+						["srifle_GM6_F",nil,450000],
 						["Rangefinder",nil,50000],
 						["optic_LRPS",nil,50000],
 						["optic_SOS",nil,30000],

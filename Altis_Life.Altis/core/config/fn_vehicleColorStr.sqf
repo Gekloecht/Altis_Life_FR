@@ -47,8 +47,7 @@ switch (_vehicle) do
 			case 11: {_color = "Bleu 2";};
 			case 12: {_color = "Brun";};
 			case 13: {_color = "Noir";};
-			case 14: {_color = "Depanneuse"};
-			case 15: {_color = "Medecin"};
+			case 14: {_color = "Medecin"};
 		};
 	};
 

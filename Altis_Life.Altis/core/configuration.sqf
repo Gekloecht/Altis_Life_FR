@@ -242,7 +242,7 @@ sell_array =
 	["donuts",60],
 	["marijuana",3200],
 	["tbacon",25],
-	["lockpick",2500],
+	["lockpick",50],
 	["pickaxe",750],
 	["redgull",200],
 	["peach",55],
@@ -259,11 +259,11 @@ sell_array =
 	["cement",2200],
 	["goldbar",95000],
 	["methu",400],
-	["methp",9000],
-	["moonshine",3000],
+	["methp",9500],
+	["moonshine",3500],
 	["vodka",900],
 	["grapes",60],
-	["artefact",1500],
+	["artefact",2000],
 	["ephedrine",400],
 	["phosphore",400]
 ];
@@ -285,7 +285,7 @@ buy_array =
 	["donuts",120],
 	["coffee",10],
 	["tbacon",75],
-	["lockpick",150],
+	["lockpick",2500],
 	["pickaxe",1200],
 	["redgull",1500],
 	["fuelF",850],
@@ -298,7 +298,7 @@ buy_array =
 	["storagebig",150000],
 	["barriere",1000],
 	["cone",100],
-	["phosphore",1000]
+	["phosphore",500]
 ];
 __CONST__(buy_array,buy_array);
 

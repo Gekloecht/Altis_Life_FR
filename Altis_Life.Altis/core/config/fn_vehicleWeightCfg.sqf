@@ -13,6 +13,7 @@ switch (_className) do
 	case "C_Offroad_01_F": {65};
 	case "I_G_Offroad_01_F": {75};
 	case "B_G_Offroad_01_F": {65};
+	case "C_Offroad_01_repair_F": {50};
 	case "B_Quadbike_01_F": {25};
 	case "I_Truck_02_covered_F": {250};
 	case "I_Truck_02_transport_F": {200};
@@ -21,6 +22,7 @@ switch (_className) do
 	case "C_SUV_01_F": {50};
 	case "C_Van_01_transport_F": {100};
 	case "I_G_Van_01_transport_F": {100};
+	case "B_G_Van_01_transport_F": {120};
 	case "C_Van_01_box_F": {150};
 	case "C_Boat_Civil_01_F": {85};
 	case "C_Boat_Civil_01_police_F": {85};
