@@ -193,6 +193,26 @@ switch (_vehicle) do
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"]
 		];
 	};
+	
+	case "O_MRAP_02_F":
+	{
+		_ret = 
+		[
+			["\A3\Soft_F\MRAP_02\data\mrap_02_ext_01_co.paa","reb","\a3\soft_f\MRAP_02\data\mrap_02_ext_02_co.paa"],
+			["textures\ifrit_darkred_01.jpg","reb","textures\ifrit_darkred_02.jpg"],
+			["textures\ifrit_green_01.jpg","reb","textures\ifrit_green_02.jpg"]
+		];
+	};
+	
+	case "O_MRAP_02_hmg_F":
+	{
+		_ret = 
+		[
+			["\A3\Soft_F\MRAP_02\data\mrap_02_ext_01_co.paa","reb","\a3\soft_f\MRAP_02\data\mrap_02_ext_02_co.paa"],
+			["textures\ifrit_darkred_01.jpg","reb","textures\ifrit_darkred_02.jpg","textures\ifrit_darkred_02.jpg"],
+			["textures\ifrit_green_01.jpg","reb","textures\ifrit_green_02.jpg","textures\ifrit_green_02.jpg"]
+		];
+	};
 
 	case "I_Truck_02_covered_F":
 	{

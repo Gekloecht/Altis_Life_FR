@@ -188,7 +188,27 @@ switch (_vehicle) do
 			case 1: {_color = "Black"};
 		};
 	};
-
+	
+	case "O_MRAP_02_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Sable"};
+			case 1: {_color = "Rouge Terre"};
+			case 2: {_color = "Vert"};
+		};
+	};
+	
+	case "O_MRAP_02_hmg_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Sable"};
+			case 1: {_color = "Rouge Terre"};
+			case 2: {_color = "Vert"};
+		};
+	};
+	
 	case "I_Truck_02_covered_F":
 	{
 		switch (_index) do
@@ -197,6 +217,7 @@ switch (_vehicle) do
 			case 1: {_color = "Black"};
 		};
 	};
+	
 
 	case "I_Truck_02_transport_F":
 	{
