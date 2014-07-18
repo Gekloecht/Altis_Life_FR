@@ -200,7 +200,9 @@ switch (_vehicle) do
 		[
 			["\A3\Soft_F\MRAP_02\data\mrap_02_ext_01_co.paa","reb","\a3\soft_f\MRAP_02\data\mrap_02_ext_02_co.paa"],
 			["textures\ifrit_darkred_01.jpg","reb","textures\ifrit_darkred_02.jpg"],
-			["textures\ifrit_green_01.jpg","reb","textures\ifrit_green_02.jpg"]
+			["textures\ifrit_green_01.jpg","reb","textures\ifrit_green_02.jpg"],
+			["textures\ifrit_blue_01.jpg","reb","textures\ifrit_blue_02.jpg"],
+			["textures\ifrit_black_01.jpg","reb","textures\ifrit_black_02.jpg"]
 		];
 	};
 	
@@ -210,10 +212,22 @@ switch (_vehicle) do
 		[
 			["\A3\Soft_F\MRAP_02\data\mrap_02_ext_01_co.paa","reb","\a3\soft_f\MRAP_02\data\mrap_02_ext_02_co.paa"],
 			["textures\ifrit_darkred_01.jpg","reb","textures\ifrit_darkred_02.jpg","textures\ifrit_darkred_02.jpg"],
-			["textures\ifrit_green_01.jpg","reb","textures\ifrit_green_02.jpg","textures\ifrit_green_02.jpg"]
+			["textures\ifrit_green_01.jpg","reb","textures\ifrit_green_02.jpg","textures\ifrit_green_02.jpg"],
+			["textures\ifrit_blue_01.jpg","reb","textures\ifrit_blue_02.jpg","textures\ifrit_blue_02.jpg"],
+			["textures\ifrit_black_01.jpg","reb","textures\ifrit_black_02.jpg","textures\ifrit_black_02.jpg"]
 		];
 	};
-
+	
+	case "B_G_Offroad_01_F":
+	{
+		_ret = 
+		[
+			["\a3\soft_f_gamma\Offroad_01\Data\offroad_01_ext_ig01_co.paa","reb"],
+			["textures\offroad_reb_red.jpg","reb"],
+			["textures\offroad_reb_green.jpg","reb"]
+		];
+	};
+		
 	case "I_Truck_02_covered_F":
 	{
 		_ret = 

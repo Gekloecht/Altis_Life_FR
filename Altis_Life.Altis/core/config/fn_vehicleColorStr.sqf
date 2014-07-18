@@ -196,6 +196,8 @@ switch (_vehicle) do
 			case 0: {_color = "Sable"};
 			case 1: {_color = "Rouge Terre"};
 			case 2: {_color = "Vert"};
+			case 3: {_color = "Bleu Glacial"};
+			case 4: {_color = "Noir"};
 		};
 	};
 	
@@ -206,6 +208,18 @@ switch (_vehicle) do
 			case 0: {_color = "Sable"};
 			case 1: {_color = "Rouge Terre"};
 			case 2: {_color = "Vert"};
+			case 3: {_color = "Bleu Glacial"};
+			case 4: {_color = "Noir"};
+		};
+	};
+	
+	case "B_G_Offroad_01_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Camo Gris"};
+			case 1: {_color = "Camo Vert"};
+			case 2: {_color = "Camo Rouge"};
 		};
 	};
 	

@@ -52,15 +52,18 @@ switch (_shop) do
 	
 	case "civ_truck":
 	{
-		_return =
-		[
-			["C_Van_01_box_F",60000],
-			["C_Offroad_01_repair_F",75000],
-			["I_Truck_02_transport_F",75000],
-      		["I_Truck_02_covered_F",100000],
-			["B_Truck_01_transport_F",200000],
-			["B_Truck_01_covered_F",400000]
-		];	
+		if(__GETC__(life_donator) > 0) then
+		{
+			_return =
+			[
+				["C_Van_01_box_F",60000],
+				["C_Offroad_01_repair_F",75000],
+				["I_Truck_02_transport_F",75000],
+				["I_Truck_02_covered_F",100000],
+				["B_Truck_01_transport_F",200000],
+				["B_Truck_01_covered_F",400000]
+			];
+		};
 	};
 	
 	case "donator":
